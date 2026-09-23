@@ -1,12 +1,19 @@
-console.log("EXECUTED");
+// console.log("EXECUTED");
 
-import moment from "moment";
+// import moment from "moment";
 
-const currentTime = moment().format("YYYY MM DD");
-console.log(currentTime);
-const person: string = "Deen";
-const count: number = 100;
+// const currentTime = moment().format("YYYY MM DD");
+// console.log(currentTime);
+// const person: string = "Deen";
+// const count: number = 100;
 
-// Architectural Pattern : MVC, Dependency Injection, MVP
+// // Architectural Pattern : MVC, Dependency Injection, MVP
 
-//Design Pattern:Middleware, Decotar
+// //Design Pattern:Middleware, Decotar
+
+import dotenv from "dotenv";
+dotenv.config();
+
+console.log("PORT:", process.env.PORT);
+
+console.log("MONGO_URL:", process.env.MONGO_URL);
