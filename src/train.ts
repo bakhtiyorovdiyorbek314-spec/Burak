@@ -20,14 +20,14 @@ console.log(getString("level"));
 // MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
 
 // const list = [1, 2, 3, 4];
-function kvadratOshir(list: number[]) {
-  const newList = list.map((ele) => {
-    return { number: ele, square: ele * ele };
-  });
-  return newList;
-}
-const result = kvadratOshir([1, 2, 3, 4, 5, 6]);
-console.log("result:", result);
+// function kvadratOshir(list: number[]) {
+//   const newList = list.map((ele) => {
+//     return { number: ele, square: ele * ele };
+//   });
+//   return newList;
+// }
+// const result = kvadratOshir([1, 2, 3, 4, 5, 6]);
+// console.log("result:", result);
 
 // TASK L:
 
