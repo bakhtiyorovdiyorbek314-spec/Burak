@@ -1,3 +1,23 @@
+/* Project Standarts:
+  -Logging standarts
+  -Naming standarts
+    functin,method,variable =>CAMEL
+    class =>PASCAL
+    folder => KEBAB
+    css =>SNAKE
+  -Error HAndling
+  
+
+
+
+
+
+
+
+
+
+*/
+
 // TASK O:
 
 // Shunday function yozing va u har xil qiymatlardan iborat array qabul qilsin.
