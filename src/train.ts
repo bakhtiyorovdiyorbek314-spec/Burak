@@ -1,3 +1,10 @@
+/*
+  Traditional API
+  Rest API
+  GraphQL API
+  ...
+*/
+
 /* Project Standarts:
   -Logging standarts
   -Naming standarts
@@ -7,14 +14,6 @@
     css =>SNAKE
   -Error HAndling
   
-
-
-
-
-
-
-
-
 
 */
 
