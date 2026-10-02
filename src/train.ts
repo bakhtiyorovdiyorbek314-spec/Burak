@@ -1,3 +1,8 @@
+/** 
+ Traditional FD => SSR(adminka)=> EJS bilan quriladi
+ Modern FD => SPA =>REACT(user) bilan quriladi
+*/
+
 // TASK P:
 
 // Parametr sifatida yagona object qabul qiladigan function yozing.
@@ -5,14 +10,14 @@
 
 // MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
 
-function objectToArray(obj: object) {
-  const x = Object.keys(obj).map((key) => [key, (obj as any)[key]]);
+// function objectToArray(obj: object) {
+//   const x = Object.keys(obj).map((key) => [key, (obj as any)[key]]);
 
-  return x;
-}
+//   return x;
+// }
 
-const result = objectToArray({ a: 10, b: 20, c: 30 });
-console.log(result);
+// const result = objectToArray({ a: 10, b: 20, c: 30 });
+// console.log(result);
 
 /*
   Traditional API
