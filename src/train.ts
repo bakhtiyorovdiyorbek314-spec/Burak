@@ -1,3 +1,25 @@
+// TASK Q:
+
+// Shunday function yozing, u 2 ta parametrga ega bo'lib
+// birinchisi object, ikkinchisi string bo'lsin.
+// Agar qabul qilinayotgan ikkinchi string, objectning
+// biror bir propertysiga mos kelsa, 'true', aks holda mos kelmasa 'false' qaytarsin.
+
+// MASALAN: hasProperty({ name: "BMW", model: "M3" }, "model"); return true;
+// Ushbu misolda, 'model' string, objectning propertysiga mos kelganligi uchun 'true' natijani qaytarmoqda
+
+function hasProperty(a: object, b: string): boolean {
+  // let list:string[]
+  let list = Object.keys(a);
+
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === b) return true;
+  }
+  return false;
+}
+const result = hasProperty({ name: "bmw", model: "m4" }, "model");
+console.log(result);
+
 /** 
  Traditional FD => SSR(adminka)=> EJS bilan quriladi
  Modern FD => SPA =>REACT(user) bilan quriladi
