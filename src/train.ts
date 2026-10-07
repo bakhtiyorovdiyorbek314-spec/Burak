@@ -1,3 +1,21 @@
+// TASK S:
+
+// Shunday function yozing, u numberlardan tashkil topgan array qabul qilsin va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin
+// MASALAN: missingNumber([3, 0, 1]) return 2
+
+function missingNumber(arr: number[]): number {
+  const a = arr.sort();
+  for (let i = 1; i < a.length; i++) {
+    if (a[i] - a[i - 1] !== 1) {
+      return a[i - 1] + 1;
+    }
+  }
+  return -2;
+}
+
+const result = missingNumber([3, 0, 1, 4]);
+console.log(result);
+
 // TASK R
 
 // Shunday function yozing, u string parametrga ega bo'lsin.
@@ -7,33 +25,33 @@
 // MASALAN: calculate("1 + 3"); return 4;
 // 1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
 
-function calculate(a: string): number {
-  const b = a
-    .split("")
-    .filter((ele) => ele !== " ")
-    // 2. map endi funksiya emas, qiymat qaytaradi: raqam bo'lsa songa aylantiradi
-    .map((ele) => (ele === "+" || ele === "-" ? ele : Number(ele)));
+// function calculate(a: string): number {
+//   const b = a
+//     .split("")
+//     .filter((ele) => ele !== " ")
+//     // 2. map endi funksiya emas, qiymat qaytaradi: raqam bo'lsa songa aylantiradi
+//     .map((ele) => (ele === "+" || ele === "-" ? ele : Number(ele)));
 
-  // 3. reduce amalni eslab qoladi va sonlarni qo'shadi/ayiradi
-  let operator: "+" | "-" = "+";
+//   // 3. reduce amalni eslab qoladi va sonlarni qo'shadi/ayiradi
+//   let operator: "+" | "-" = "+";
 
-  return b.reduce<number>((total, currentValue) => {
-    if (currentValue === "+" || currentValue === "-") {
-      operator = currentValue;
-      return total;
-    }
-    return operator === "+" ? total + currentValue : total - currentValue;
-  }, 0);
-}
-const result = calculate("1 + 3");
-console.log(result);
+//   return b.reduce<number>((total, currentValue) => {
+//     if (currentValue === "+" || currentValue === "-") {
+//       operator = currentValue;
+//       return total;
+//     }
+//     return operator === "+" ? total + currentValue : total - currentValue;
+//   }, 0);
+// }
+// const result = calculate("1 + 3");
+// console.log(result);
 
-console.log("============================ 2-usul ============================");
+// console.log("============================ 2-usul ============================");
 
-const hisobla = (a: string): number =>
-  a.split("+").reduce((total, n) => total + Number(n), 0);
+// const hisobla = (a: string): number =>
+//   a.split("+").reduce((total, n) => total + Number(n), 0);
 
-console.log(hisobla("1 + 3")); // 4
+// console.log(hisobla("1 + 3")); // 4
 // TASK Q:
 
 // Shunday function yozing, u 2 ta parametrga ega bo'lib
