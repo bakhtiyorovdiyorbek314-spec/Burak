@@ -4,17 +4,24 @@
 // MASALAN: missingNumber([3, 0, 1]) return 2
 
 function missingNumber(arr: number[]): number {
-  const a = arr.sort();
+  const a = [...arr].sort((x, y) => x - y);
+
+  // Chetdagi son: 0 tushib qolgan bo'lsa
+  if (a[0] !== 0) return 0;
+
   for (let i = 1; i < a.length; i++) {
     if (a[i] - a[i - 1] !== 1) {
       return a[i - 1] + 1;
     }
   }
-  return -2;
+
+  // Oxirgi son  tushib qolgan bo'lsa
+  return a[a.length - 1] + 1;
 }
 
-const result = missingNumber([3, 0, 1, 4]);
-console.log(result);
+console.log(missingNumber([3, 0, 1, 4])); // 2
+console.log(missingNumber([1, 2, 3])); // 0 (boshidan tushgan)
+console.log(missingNumber([0, 1, 2])); // 3 (oxiridan tushgan)
 
 // TASK R
 
