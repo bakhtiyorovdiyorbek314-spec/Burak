@@ -11,8 +11,8 @@
 // Keyingi namunada ham xuddi shunday xolat takrorlanmoqda.
 function sumOdds(son: number): number {
   let nechta = 0;
-  let i = 0;
-  for (; i < son; i += 2) {
+
+  for (let i = 0; i < son; i += 2) {
     if (i + 1 < son) {
       nechta++;
     }
@@ -23,6 +23,8 @@ console.log(sumOdds(9));
 console.log(sumOdds(11));
 console.log(sumOdds(10));
 console.log(sumOdds(21));
+
+console.log(sumOdds(0));
 
 // TASK T
 
