@@ -1,3 +1,29 @@
+// TASK U
+
+// Shunday function tuzing, uni number parametri bo'lsin.
+// Va bu function berilgan parametrgacha, 0'dan boshlab
+// oraliqda nechta toq sonlar borligini aniqlab return qilsi.
+
+// MASALAN: sumOdds(9) return 4; sumOdds(11) return 5;
+
+// Yuqoridagi birinchi misolda, argument sifatida, 9 berilmoqda.
+// Va 0'dan boshlab sanaganda 9'gacha 4'ta toq son mavjud.
+// Keyingi namunada ham xuddi shunday xolat takrorlanmoqda.
+function sumOdds(son: number): number {
+  let nechta = 0;
+  let i = 0;
+  for (; i < son; i += 2) {
+    if (i + 1 < son) {
+      nechta++;
+    }
+  }
+  return nechta;
+}
+console.log(sumOdds(9));
+console.log(sumOdds(11));
+console.log(sumOdds(10));
+console.log(sumOdds(21));
+
 // TASK T
 
 // Shunday function tuzing, u sonlardan tashkil topgan 2'ta array qabul qilsin.
@@ -7,14 +33,14 @@
 
 // Yuqoridagi misolda, ikkala arrayni birlashtirib, tartib raqam bo'yicha tartiblab qaytarmoqda.
 
-function mergeSortedArrays(a: number[], b: number[]): number[] {
-  const c = a.concat(b).sort((x, y) => x - y);
+// function mergeSortedArrays(a: number[], b: number[]): number[] {
+//   const c = a.concat(b).sort((x, y) => x - y);
 
-  return c;
-}
+//   return c;
+// }
 
-const result = mergeSortedArrays([5, 0, 3, 4, 31, 5, 6], [4, 6, 30, 77, 45]);
-console.log("result:", result);
+// const result = mergeSortedArrays([5, 0, 3, 4, 31, 5, 6], [4, 6, 30, 77, 45]);
+// console.log("result:", result);
 
 // TASK S:
 
