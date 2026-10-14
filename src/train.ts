@@ -1,3 +1,32 @@
+// TASK V
+
+// Shunday function yozing, uni string parametri bo'lsin.
+// Va bu function stringdagi har bir harfni o'zi bilan
+// necha marotaba taktorlanganligini ko'rsatuvchi object qaytarsin.
+
+// MASALAN: countChars("hello") return {h: 1, e: 1, l: 2, o: 1}
+
+// Yuqoridagi misolda, 'hello' so'zi tarkibida
+// qatnashgan harflar necha marotaba takrorlangini bilan
+// object sifatida qaytarilmoqda.
+
+function countChars(word: string): Record<string, number> {
+  const x: Record<string, number> = {};
+
+  for (let i = 0; i < word.length; i++) {
+    const letter = word[i];
+    x[letter] = (x[letter] || 0) + 1;
+  }
+  return x;
+}
+const result = countChars("hello");
+const result1 = countChars("mashaqqat");
+const result2 = countChars("Akula");
+
+console.log("result:", result);
+console.log("result1:", result1);
+console.log("result2:", result2);
+
 // TASK U
 
 // Shunday function tuzing, uni number parametri bo'lsin.
@@ -9,22 +38,36 @@
 // Yuqoridagi birinchi misolda, argument sifatida, 9 berilmoqda.
 // Va 0'dan boshlab sanaganda 9'gacha 4'ta toq son mavjud.
 // Keyingi namunada ham xuddi shunday xolat takrorlanmoqda.
-function sumOdds(son: number): number {
-  let nechta = 0;
+// function sumOdds(son: number): number {
+//   let nechta = 0;
 
-  for (let i = 0; i < son; i += 2) {
-    if (i + 1 < son) {
-      nechta++;
-    }
-  }
-  return nechta;
-}
-console.log(sumOdds(9));
-console.log(sumOdds(11));
-console.log(sumOdds(10));
-console.log(sumOdds(21));
+//   for (let i = 0; i < son; i += 2) {
+//     if (i + 1 < son) {
+//       nechta++;
+//     }
+//   }
+//   return nechta;
+// }
+// console.log(sumOdds(9));
+// console.log(sumOdds(11));
+// console.log(sumOdds(10));
+// console.log(sumOdds(21));
+// console.log(sumOdds(0));
 
-console.log(sumOdds(0));
+// function sumOdds(son: number): number {
+//   let count = 0;
+//   for (let i = 0; i < son; i++) {
+//     if (i % 2 !== 0) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(sumOdds(9));
+// console.log(sumOdds(11));
+// console.log(sumOdds(10));
+// console.log(sumOdds(8));
 
 // TASK T
 
