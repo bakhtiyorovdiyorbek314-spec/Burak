@@ -1,3 +1,30 @@
+// TASK W
+
+// Shunday function yozing, u o'ziga parametr sifatida
+// yagona array va number qabul qilsin. Siz tuzgan function
+// arrayni numberda berilgan uzunlikda kesib bo'laklarga
+// ajratgan holatida qaytarsin.
+// MASALAN: chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+// return [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]];
+
+// Yuqoridagi namunada berilayotgan array ikkinchi parametr 3'ga
+// asoslanib 3 bo'lakga bo'linib qaytmoqda. Qolgani esa o'z holati qolyapti
+
+function chunkArray(arr: number[], by: number): number[][] {
+  let devided: number[][] = [];
+
+  for (let i = 0; i < arr.length; i += by) {
+    const x = arr.slice(i, i + by);
+    devided.push(x);
+  }
+  return devided;
+}
+
+const result = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+console.log("result:", result);
+const result2 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2);
+console.log("result2:", result2);
+
 // TASK V
 
 // Shunday function yozing, uni string parametri bo'lsin.
@@ -10,22 +37,22 @@
 // qatnashgan harflar necha marotaba takrorlangini bilan
 // object sifatida qaytarilmoqda.
 
-function countChars(word: string): Record<string, number> {
-  const x: Record<string, number> = {};
+// function countChars(word: string): Record<string, number> {
+//   const x: Record<string, number> = {};
 
-  for (let i = 0; i < word.length; i++) {
-    const letter = word[i];
-    x[letter] = (x[letter] || 0) + 1;
-  }
-  return x;
-}
-const result = countChars("hello");
-const result1 = countChars("mashaqqat");
-const result2 = countChars("Akula");
+//   for (let i = 0; i < word.length; i++) {
+//     const letter = word[i];
+//     x[letter] = (x[letter] || 0) + 1;
+//   }
+//   return x;
+// }
+// const result = countChars("hello");
+// const result1 = countChars("mashaqqat");
+// const result2 = countChars("Akula");
 
-console.log("result:", result);
-console.log("result1:", result1);
-console.log("result2:", result2);
+// console.log("result:", result);
+// console.log("result1:", result1);
+// console.log("result2:", result2);
 
 // TASK U
 
