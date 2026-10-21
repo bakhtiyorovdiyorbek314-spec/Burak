@@ -1,3 +1,37 @@
+// TASK X
+
+// Shunday function yozing, uni object va string parametrlari bo'lsin.
+// Bu function, birinchi object parametri tarkibida, kalit sifatida ikkinchi string parametri
+// necha marotaba takrorlanganlini sanab qaytarsin.
+
+// Eslatma => Nested object'lar ham sanalsin
+
+// MASALAN: countOccurrences({model: 'Bugatti', steer: {model: 'HANKOOK', size: 30}}, 'model') return 2
+
+// Yuqoridagi misolda, birinchi argument object, ikkinchi argument 'model'.
+// Funktsiya, shu ikkinchi argument 'model', birinchi argument object
+// tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
+
+function countOccurrences(car: object, word: string): number {
+  let count = 0;
+  for (const key in car) {
+    if (key === word) count++;
+
+    const value = (car as Record<string, unknown>)[key];
+
+    // Qiymat object bo'lsa (null emas), ichiga kirib sanaymiz
+    if (typeof value === "object" && value !== null) {
+      count += countOccurrences(value, word);
+    }
+  }
+  return count;
+}
+
+const result = countOccurrences(
+  { model: "Bugatti", steer: { model: "HANKOOK", size: 30 }, class: "model " },
+  "model",
+);
+console.log("result:", result);
 // TASK W
 
 // Shunday function yozing, u o'ziga parametr sifatida
@@ -10,20 +44,20 @@
 // Yuqoridagi namunada berilayotgan array ikkinchi parametr 3'ga
 // asoslanib 3 bo'lakga bo'linib qaytmoqda. Qolgani esa o'z holati qolyapti
 
-function chunkArray(arr: number[], by: number): number[][] {
-  let devided: number[][] = [];
+// function chunkArray(arr: number[], by: number): number[][] {
+//   let devided: number[][] = [];
 
-  for (let i = 0; i < arr.length; i += by) {
-    const x = arr.slice(i, i + by);
-    devided.push(x);
-  }
-  return devided;
-}
+//   for (let i = 0; i < arr.length; i += by) {
+//     const x = arr.slice(i, i + by);
+//     devided.push(x);
+//   }
+//   return devided;
+// }
 
-const result = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
-console.log("result:", result);
-const result2 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2);
-console.log("result2:", result2);
+// const result = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3);
+// console.log("result:", result);
+// const result2 = chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2);
+// console.log("result2:", result2);
 
 // TASK V
 
