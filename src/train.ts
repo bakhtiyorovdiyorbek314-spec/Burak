@@ -1,3 +1,30 @@
+// TASK Y
+
+// Shunday function yozing, uni 2'ta array parametri bo'lsin.
+// Bu function ikkala arrayda ham ishtirok etgan bir xil
+// qiymatlarni yagona arrayga joylab qaytarsin.
+
+// MASALAN: findIntersection([1,2,3], [3,2,0]) return [2,3]
+
+// Yuqoridagi misolda, argument sifatida berilayotgan array'larda
+// o'xshash sonlar mavjud. Function'ning vazifasi esa ana shu
+// ikkala array'da ishtirok etgan o'xshash sonlarni yagona arrayga
+// joylab return qilmoqda.
+
+function findIntersection(x: number[], y: number[]): number[] {
+  const intersec: number[] = [];
+
+  for (const ele of x) {
+    if (y.includes(ele) && !intersec.includes(ele)) {
+      intersec.push(ele);
+    }
+  }
+  return intersec;
+}
+
+const result = findIntersection([1, 2, 3, 6, 7], [3, 2, 0, 7]);
+console.log(result); // [2, 3]
+
 // TASK X
 
 // Shunday function yozing, uni object va string parametrlari bo'lsin.
@@ -12,26 +39,26 @@
 // Funktsiya, shu ikkinchi argument 'model', birinchi argument object
 // tarkibida kalit sifatida 2 marotaba takrorlanganligi uchun 2 soni return qilmoqda
 
-function countOccurrences(car: object, word: string): number {
-  let count = 0;
-  for (const key in car) {
-    if (key === word) count++;
+// function countOccurrences(car: object, word: string): number {
+//   let count = 0;
+//   for (const key in car) {
+//     if (key === word) count++;
 
-    const value = (car as Record<string, unknown>)[key];
+//     const value = (car as Record<string, unknown>)[key];
 
-    // Qiymat object bo'lsa (null emas), ichiga kirib sanaymiz
-    if (typeof value === "object" && value !== null) {
-      count += countOccurrences(value, word);
-    }
-  }
-  return count;
-}
+//     // Qiymat object bo'lsa (null emas), ichiga kirib sanaymiz
+//     if (typeof value === "object" && value !== null) {
+//       count += countOccurrences(value, word);
+//     }
+//   }
+//   return count;
+// }
 
-const result = countOccurrences(
-  { model: "Bugatti", steer: { model: "HANKOOK", size: 30 }, class: "model " },
-  "model",
-);
-console.log("result:", result);
+// const result = countOccurrences(
+//   { model: "Bugatti", steer: { model: "HANKOOK", size: 30 }, class: "model " },
+//   "model",
+// );
+// console.log("result:", result);
 // TASK W
 
 // Shunday function yozing, u o'ziga parametr sifatida
