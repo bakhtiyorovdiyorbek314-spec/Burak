@@ -71,6 +71,23 @@ class MemberService {
     return result;
   }
 
+  public async updateMember(
+    member: Member,
+    input: MemberUpdateInput,
+  ): Promise<Member> {
+    const memberId = shapeIntoMongooseObject(member._id);
+    const result = await this.memberModel
+      .findOneAndUpdate(
+        { _id: member._id }, //FILTER
+        input, //UPDATE
+        { new: true }, //OPTION
+      )
+      .exec();
+    if (!result) throw new Errors(HttpCode.NOT_MODIFIED, Message.UPDATE_FAILED);
+
+    return result;
+  }
+
   /**SSR */
   // TODO:
   public async processSignup(input: MemberInput): Promise<Member> {
