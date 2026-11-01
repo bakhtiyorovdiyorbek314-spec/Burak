@@ -27,6 +27,12 @@ router.post(
   memberController.updateMember,
 );
 
+router.get(
+  "/member/top-users",
+  // memberController.verifyAuth,
+  memberController.getTopUsers,
+);
+
 /**PRODUCT */
 /**ORDER */
 
