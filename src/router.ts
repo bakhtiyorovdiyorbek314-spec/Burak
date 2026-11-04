@@ -37,7 +37,7 @@ router.get(
 );
 
 /**PRODUCT */
-router.get("/product/all/:id", productController.getProducts);
+router.get("/product/all", productController.getProducts);
 
 /**ORDER */
 
