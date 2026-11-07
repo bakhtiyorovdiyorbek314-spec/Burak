@@ -9,10 +9,15 @@ const orderItemSchema = new Schema(
 
     itemPrice: {
       type: Number,
-      ref: "Order",
+      required: true,
     },
 
     orderId: {
+      type: Schema.Types.ObjectId,
+      ref: "Order",
+    },
+
+    productId: {
       type: Schema.Types.ObjectId,
       ref: "Product",
     },
