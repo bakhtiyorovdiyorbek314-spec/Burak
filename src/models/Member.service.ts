@@ -118,9 +118,9 @@ class MemberService {
     return await this.memberModel
       .findOneAndUpdate(
         {
-          _id: member._id, //FILTER
-          MemberType: MemberType.USER,
-          MemberStatus: MemberStatus.ACTIVE,
+          _id: memberId, //FILTER
+          memberType: MemberType.USER,
+          memberStatus: MemberStatus.ACTIVE,
         }, //UPDATE
         { $inc: { memberPoints: point } },
         { new: true }, //OPTION
